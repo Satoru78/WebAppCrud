@@ -16,13 +16,22 @@ namespace WebAppCrud
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-
+            if (!IsPostBack)
+            {
+                BindGridView();
+            }
         }
-       
-        protected void ButtonAdd_Click(object sender, EventArgs e)
+        protected void BindGridView()
         {
-           
+            using (var db = new dbFlowersEntities())
+            {
+                var data = db.Product.ToList();
+                GridViewData.DataSource = data;
+                GridViewData.DataBind();
+            }
+        }
+        protected void ButtonAdd_Click(object sender, EventArgs e)
+        {           
                 Product product = new Product();
                 if (product.ID == 0)
                 {
@@ -39,13 +48,41 @@ namespace WebAppCrud
                     product.Image = TextBoxImage.Text;
                     DataApp.db.Product.Add(product);
                 }
-                DataApp.db.SaveChanges();
-
-           
-
+                DataApp.db.SaveChanges();       
         }
+        //protected void ButtonSave_Click(object sender, EventArgs e)
+        //{
+        //    using (var context = new dbFlowersEntities())
+        //    {
+        //        GridViewData.DataBind();
+        //        foreach (GridViewRow row in GridViewData.Rows)
+        //        {
+        //            // Находим id выбранной записи
+        //            var id = Convert.ToInt32(GridViewData.DataKeys[row.RowIndex].Value);
 
-        
+        //            // Находим запись по id
+        //            var entity = context.User.FirstOrDefault(x => x.ID == id);
 
+        //            if (entity != null)
+        //            {
+        //                // Обновляем данные записи
+        //                entity.FirstName = ((TextBox)row.FindControl("TextBoxFirstName")).Text;
+        //                entity.LastName = ((TextBox)row.FindControl("TextBoxLastName")).Text;
+        //                entity.Age = Convert.ToInt32(((TextBox)row.FindControl("TextBoxAge")).Text);
+        //            }
+        //        }
+
+        //        // Сохраняем изменения в базу данных
+        //        context.SaveChanges();
+        //    }
+
+        //    // Обновляем GridView
+        //    GridViewData.DataBind();
+        //}
+        protected void GridViewData_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewData.EditIndex = e.NewEditIndex;
+            BindGridView();
+        }
     }
 }
