@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" CodeBehind="Default.aspx.cs" Inherits="WebAppTest._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" CodeBehind="Default.aspx.cs" Inherits="WebAppCrud._Default" %>
 
 <!DOCTYPE html>
 
@@ -19,19 +19,59 @@
         <div class="center">
             <table>
                 <tr>
-                    <td>Имя:</td>
+                    <td>Артикул:</td>
                     <td>
-                        <asp:TextBox ID="TextBoxFirstName" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBoxArticul" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td>Фамилия:</td>
+                    <td>Название:</td>
                     <td>
-                        <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBoxTitle" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td>Возраст:</td>
+                    <td>Еденица измерения:</td>
                     <td>
-                        <asp:TextBox ID="TextBoxAge" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBoxUnit" runat="server"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td>Стоимость:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxCost" runat="server"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td>Скидка:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxDiscount" runat="server"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td>Производитель:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxManufacturer" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Поставщик:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxSupplier" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Категория:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxIDProductCategory" runat="server"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td>Количество на складе:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxQuInStock" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Описание:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxDescription" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Изображение:</td>
+                    <td>
+                        <asp:TextBox ID="TextBoxImage" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -39,32 +79,26 @@
                 </tr>
             </table>
             <br />
-            <asp:GridView ID="GridViewData" runat="server" AutoGenerateColumns="False" OnRowEditing="GridViewData_RowEditing">
+           <%-- <asp:GridView ID="GridViewData" runat="server" AutoGenerateColumns="False" OnRowEditing="GridViewData_RowEditing" >
                 <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" />
+                    <asp:BoundField DataField="Артикул" HeaderText="Id" ReadOnly="True" />
                     <asp:TemplateField HeaderText="">
-                        <ItemTemplate><%# Eval("FirstName") %></ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="TextBoxEditFirstName" runat="server" Text='<%# Bind("FirstName") %>'></asp:TextBox>
-                        </EditItemTemplate>
+                        <ItemTemplate><%# Eval("Articul") %></ItemTemplate>
+                        
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="">
-                        <ItemTemplate><%# Eval("LastName") %></ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="TextBoxEditLastName" runat="server" Text='<%# Bind("LastName") %>'></asp:TextBox>
-                        </EditItemTemplate>
+                    <asp:TemplateField HeaderText="Название">
+                        <ItemTemplate><%# Eval("Title") %></ItemTemplate>
+                       
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Возраст">
-                        <ItemTemplate><%# Eval("Age") %></ItemTemplate>
-                        <EditItemTemplate>
-                            <asp:TextBox ID="TextBoxEditAge" runat="server" Text='<%# Bind("Age") %>'></asp:TextBox>
-                        </EditItemTemplate>
+                    <asp:TemplateField HeaderText="Еденица измерения">
+                        <ItemTemplate><%# Eval("Unit") %></ItemTemplate>
+                       
                     </asp:TemplateField>
                     <asp:CommandField ShowEditButton="True" />
                 </Columns>
             </asp:GridView>
 
-            <asp:Button ID="ButtonSave" runat="server" Text="Сохранить" OnClick="ButtonSave_Click" />
+            <%--<asp:Button ID="ButtonSave" runat="server" Text="Сохранить" OnClick="ButtonSave_Click" />--%>--%>
 
         </div>
     </form>

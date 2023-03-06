@@ -7,7 +7,7 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace WebAppTest
+namespace WebAppCrud
 {
 
 
@@ -24,31 +24,103 @@ namespace WebAppTest
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// TextBoxFirstName элемент управления.
+        /// TextBoxArticul элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxFirstName;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxArticul;
 
         /// <summary>
-        /// TextBoxLastName элемент управления.
+        /// TextBoxTitle элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLastName;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTitle;
 
         /// <summary>
-        /// TextBoxAge элемент управления.
+        /// TextBoxUnit элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxAge;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxUnit;
+
+        /// <summary>
+        /// TextBoxCost элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCost;
+
+        /// <summary>
+        /// TextBoxDiscount элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDiscount;
+
+        /// <summary>
+        /// TextBoxManufacturer элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxManufacturer;
+
+        /// <summary>
+        /// TextBoxSupplier элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSupplier;
+
+        /// <summary>
+        /// TextBoxIDProductCategory элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxIDProductCategory;
+
+        /// <summary>
+        /// TextBoxQuInStock элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxQuInStock;
+
+        /// <summary>
+        /// TextBoxDescription элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDescription;
+
+        /// <summary>
+        /// TextBoxImage элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxImage;
 
         /// <summary>
         /// ButtonAdd элемент управления.
@@ -58,23 +130,5 @@ namespace WebAppTest
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonAdd;
-
-        /// <summary>
-        /// GridViewData элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewData;
-
-        /// <summary>
-        /// ButtonSave элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSave;
     }
 }
